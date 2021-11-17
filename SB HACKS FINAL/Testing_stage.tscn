@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://blue_tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Friends/Gray_Friend.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Friends/Red_Friend.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Friends/Green_Friend.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/Flier.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Spikey.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Goal/Goal.tscn" type="PackedScene" id=8]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 262152, 536870918, 0, 327687, -2147483642, 0, 327688, 3, 0, 393224, 3, 0, 458753, 0, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 7, 0 )
+
+[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 278.961, 293.41 )
+
+[node name="Camera2D" type="Camera2D" parent="TileMap/Player"]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Friend5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 342.733, 298.323 )
+
+[node name="Friend6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 318.949, 358.973 )
+
+[node name="Friend7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 134.622, 418.433 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 209.542, 368.486 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 366.517, 219.836 )
+
+[node name="Goal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 395.058, 385.135 )
+frame = 1

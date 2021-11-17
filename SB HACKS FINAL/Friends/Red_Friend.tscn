@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Friends/red_friend_sprite.png" type="Texture" id=1]
+[ext_resource path="res://Friends/friend_base.tscn" type="PackedScene" id=2]
+
+[node name="Friend" instance=ExtResource( 2 )]
+
+[node name="Sprite" parent="." index="2"]
+scale = Vector2( 0.496996, 0.496996 )
+texture = ExtResource( 1 )
